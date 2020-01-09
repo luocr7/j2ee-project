@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manage</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+    <link href="css/login.css" type="text/css" rel="stylesheet">
+    <style>
+        body,html{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="Nav">
+    <H1 class="NavH">图书馆管理系统</H1>
+    <H2 id="indexPage" class="NavH2" style="left: 52%;">首页</H2>
+    <H2 id="borrowPage" class="NavH2" style="left: 60%">借书信息</H2>
+    <H2 id="managePage" class="NavH2" style="left: 70%">书籍管理</H2>
+    <H2 id="personalPage" class="NavH2">个人信息</H2>
+</div>
+
+
+    <fieldset class="typeLine" style="position: absolute;width: 70%;height: 70%;left: 15%;top: 20%">
+        <legend style="font-size: 25px;font-family: Cambria;color:mediumaquamarine;">书籍管理</legend>
+
+        <p style="position: absolute;font-size: 16px;font-family: Cambria;left: 15.2%;top:8%">修改(删除)书籍信息:</p>
+        <div class="search" style="left: 30%;top: 10%">
+          <input id="searchBookName" class="searchInput" placeholder="请输入书名">
+            <div id="search" class="searchIcon">
+                <img class="searchImg" src="images/search.png">
+            </div>
+        </div>
+
+        <div id="nextButton" class="pageDis" style="left: 60%;top: 9.5%;width: 8%;height: 8%">添加书籍</div>
+
+        <ul class="bookUl" style="left: 18%;">
+            <li class="bookLi" style="width: 600px">
+                <img class="bookImg" src="images/pic1.jpg"/>
+                <div style="line-height: 30px;">
+                    <p style="position: absolute;left: 45%;top: -0.4%;font-family: 华文行楷;
+                    font-size: 20px;">书名:</p>
+                    <input class="bookName" style="width: 80%;left: 60%;border: none;border-bottom: 1px solid #ccc"
+                              value="明朝那些事儿"/>
+                    <p style="position: absolute;left: 45%;top: 5%;font-family: 华文行楷;
+                    font-size: 20px;">作者:</p>
+                    <br><input class="author" style="width: 80%;left: 60%;border: none;border-bottom: 1px solid #ccc" value="余华"/>
+                    <p style="position: absolute;left: 45%;top: 10%;font-family: 华文行楷;
+                    font-size: 20px;">得分:</p>
+                    <br><input class="star" style="width: 80%;left: 60%;border: none;border-bottom: 1px solid #ccc" value="9">
+                    <p style="position: absolute;left: 45%;top: 17%;font-family: 华文行楷;
+                    font-size: 20px;">评价人数:</p>
+                    <br><input class="peopleNum" style="width: 70%;left: 70%;border: none;border-bottom: 1px solid #ccc"  value="1000"/>
+                </div>
+                <div   class="pageDis" style="left: 500px;top: -90px;position: relative;width: 70px;
+                    height: 40px;background-color: mediumaquamarine">修改</div>
+                <div  class="pageDis" style="left: 500px;top: -50px;position: relative;width: 70px;
+                    height: 40px;background-color: red">删除</div>
+                <p class="bookId" style="visibility: hidden;"></p>
+            </li>
+        </ul>
+    </fieldset>
+
+
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script>
+    $("#borrowPage").click(function () {
+        window.location.href="borrow.html";
+    });
+    $("#personalPage").click(function () {
+        window.location.href="personal.html";
+    });
+    $("#indexPage").click(function () {
+        window.location.href="index.html";
+    });
+
+    $("#search").click(function () {
+        var normalDialog=document.createElement('div');
+       var  newBackground=document.createElement('div');
+         newBackground.className="newBackground";
+         newBackground.style.cssText="left:0;top:0"
+        normalDialog.style.cssText="height:70%;width:40%;left:30%;top:10%;border:1px solid #ccc";
+        normalDialog.className="normaldialog";
+
+            //标题
+            var h1=document.createElement('H1');
+            h1.className="loginH1";
+            h1.innerText="添加书籍";
+            h1.style.top='3%';
+            h1.style.color='mediumaquamarine';
+
+
+            for (var i=0;i<6;i++){
+                var box=document.createElement('div');
+                box.className="AccountBox";
+                box.style.cssText="width:50%;height:5%;left:25%;top:"+(i*10+20)+"%";
+                var a=document.createElement('input');
+                a.className="AccountInput";
+                a.style.cssText="left:0;width:80%;height:80%;";
+                if (i==0){
+                    a.placeholder="请输入书名";
+                } else if (i==1){
+                    a.placeholder="请输入作者名";
+                } else if (i==2){
+                    a.placeholder="请输入书籍类型";
+                } else if (i==3){
+                    a.placeholder="请输入图片地址";
+                } else if (i==4){
+                    a.placeholder="请输入评分";
+                } else {
+                    a.placeholder="请输入评价人数";
+                }
+                box.appendChild(a);
+                normalDialog.appendChild(box);
+                inputEv(a,box);
+            }
+
+        //返回按钮
+        var back=document.createElement('div');
+        back.className="back";
+        back.style.cssText="background-size:50%";
+        back.onclick=function (ev) {
+            normalDialog.style.animation="break 0.2s";
+            function removeDialog() {
+                document.body.removeChild(normalDialog);
+                document.body.removeChild(newBackground);
+            }
+            setTimeout(removeDialog,150);
+            clearTimeout(removeDialog);
+        };
+
+        //提交按钮
+        var button=document.createElement('div');
+        button.className="loginButton";
+        button.innerText="提交";
+        button.style.top="85%";
+        button.style.left="25%";
+        button.style.width="50%";
+        button.onclick=function (ev) {
+            var a=document.getElementsByClassName("AccountInput");
+            if (a[0].value.length==0){
+                createDialog("书名不能为空!",47,40)
+            } else if (a[1].value.length==0){
+                createDialog("作者名不能为空!",47,40);
+            }else if (a[2].value.length==0) {
+                createDialog("类型不能为空!", 47, 40);
+            }else if (a[3].value.length==0) {
+                createDialog("图片地址不能为空!", 47, 40);
+            }else if (a[4].value.length==0) {
+                createDialog("评分不能为空!", 47, 40);
+            }else if (a[5].value.length==0) {
+                createDialog("评价人数不能为空!", 47, 40);
+            }else {
+                alert(a[0].value)
+            }
+        };
+
+            normalDialog.appendChild(button);
+            normalDialog.appendChild(back);
+            normalDialog.appendChild(h1);
+            document.body.appendChild(normalDialog);
+            document.body.appendChild(newBackground);
+    });
+
+
+    //输入框监听事件
+    function inputEv(name,input) {
+        name.addEventListener('focus', function (ev) {
+            input.style.border = '1px solid mediumturquoise';
+            input.style.boxShadow = 'inset 0px 1px 1px mediumturquoise,0px 0px 8px mediumturquoise';
+        });
+        name.addEventListener('blur', function (evt) {
+            input.style.border = '1px solid #ccc';
+            input.style.boxShadow = 'none';
+        });
+    }
+
+    //创建确认消息弹框
+    function createConfirmDialog(msg,left,top) {
+        var dialog=document.createElement('div');
+        var text=document.createTextNode(msg);
+        var btn1=document.createElement('div');
+        var btn2=document.createElement('div');
+        btn1.innerHTML="确认";
+        btn1.className="pageDis";
+        btn1.style.cssText="position:absolute;height:40%;width:40%;left:5%;top:55%;background-color:red;" +
+            "border-radius:4px;";
+        btn2.innerHTML="取消";
+        btn2.className="pageDis";
+        btn2.style.cssText="position:absolute;height:40%;width:40%;left:50%;top:55%;" +
+            "border-radius:4px;";
+        dialog.appendChild(btn2);
+        dialog.appendChild(btn1);
+        dialog.appendChild(text);
+        dialog.style.cssText="left:"+left+"%;top:"+top+"%;height:12%;width:12%;line-height:35px;background-color:#000";
+        dialog.className="dialog";
+        dialog.style.opacity=0.8;
+        document.body.appendChild(dialog);
+        function animation() {
+            dialog.style.animation="break 0.2s";
+        }
+        btn1.onclick=function (ev) {
+            alert(1)
+        }
+        btn2.onclick=function (ev) {
+            document.body.removeChild(dialog)
+        }
+
+    }
+
+    //创建消息弹框
+    function createDialog(msg,left,top) {
+        var dialog=document.createElement('div');
+        var text=document.createTextNode(msg);
+        dialog.appendChild(text);
+        dialog.style.cssText="left:"+left+"%;top:"+top+"%";
+        dialog.className="dialog";
+        document.body.appendChild(dialog);
+        function animation() {
+            dialog.style.animation="break 0.2s";
+        }
+        function remove(){
+            document.body.removeChild(dialog);
+            clearTimeout(animation);
+        }
+        setTimeout(animation,2000);
+        setTimeout(remove,2100);
+        clearTimeout(remove);
+    }
+</script>
+</body>
+</html>

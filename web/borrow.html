@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>borrow</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="Nav">
+    <H1 class="NavH">图书馆管理系统</H1>
+    <H2 id="indexPage" class="NavH2" style="left: 52%;">首页</H2>
+    <H2 id="borrowPage" class="NavH2" style="left: 60%">借书信息</H2>
+    <H2 id="managePage" class="NavH2" style="left: 70%">书籍管理</H2>
+    <H2 id="personalPage" class="NavH2">个人信息</H2>
+</div>
+
+<div id="borrowPag">
+    <fieldset class="typeLine" style="position: absolute;width: 70%;height: 70%;left: 15%;top: 20%">
+        <legend style="font-size: 25px;font-family: Cambria;color:mediumaquamarine;">借书信息</legend>
+        <ul class="bookUl" style="top: 6%">
+            <li class="bookLi" style="width: 600px">
+                <img class="bookImg" src="images/pic/1/pic1.jpg"/>
+                <div style="line-height: 30px;">
+                    <p class="bookName" style="width: 80%;left: 60%">拉克减肥啦儿科福利科技</p>
+                    <br><p class="author" style="width: 80%;left: 60%;">奥尔格啊噶尔恩爱狗</p>
+                    <br><p class="star" style="width: 80%;left: 60%">阿尔发个</p>
+                    <br><p class="peopleNum" style="width: 80%;left: 60%">奥格奥尔</p>
+                </div>
+                <div id="return0" class="pageDis" style="left: 750px;top: -50px;position: relative;width: 70px;
+                    height: 40px">还书
+                    <p class="bookId" style="visibility: hidden;">1</p>
+                </div>
+            </li>
+            <li class="bookLi" style="width: 600px;">
+                <img class="bookImg" src="images/pic/1/pic1.jpg"/>
+                <div style="line-height: 30px;">
+                    <p class="bookName" style="width: 80%;left: 60%">拉克减肥啦儿科福利科技</p>
+                    <br><p class="author" style="width: 80%;left: 60%;">奥尔格啊噶尔恩爱狗</p>
+                    <br><p class="star" style="width: 80%;left: 60%">阿尔发个</p>
+                    <br><p class="peopleNum" style="width: 80%;left: 60%">奥格奥尔</p>
+                </div>
+                <div id="return1" class="pageDis" style="left: 750px;top: -50px;position: relative;width: 70px;
+                    height: 40px">还书
+                    <p class="bookId" style="visibility: hidden;"></p>
+                </div>
+            </li>
+        </ul>
+        <div class="pageDis" style="width: 70px;height:40px;top: 84%;left: 40%">上一页</div>
+        <p  style="position: absolute;top: 82.5%;left: 49%;font-family: Cambria">1</p>
+        <p style="position: absolute;top: 82.5%;left: 50%;font-family: Cambria">/</p>
+        <p  style="position: absolute;top: 82.5%;left: 51%;font-family: Cambria">1</p>
+        <div class="pageDis" style="width: 70px;height:40px;top: 84%;left: 55%">下一页</div>
+    </fieldset>
+</div>
+
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script>
+    $("#managePage").click(function () {
+        window.location.href="manage.html";
+    });
+    $("#personalPage").click(function () {
+        window.location.href="personal.html";
+    });
+    $("#indexPage").click(function () {
+        window.location.href="index.html";
+    });
+    $("#return0").click(function () {
+        var bookid=parseInt($(".bookId")[0].innerHTML)
+        alert(bookid)
+    })
+</script>
+</body>
+</html>

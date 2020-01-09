@@ -1,0 +1,15 @@
+.Msgbox{
+    position: relative;
+    font-size: 15px;
+    left: 100px;
+}
+.inputStyle{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 200px;
+
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}

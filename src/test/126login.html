@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    html,body{
+        margin: 0;
+    }
+    input::-webkit-input-placeholder{
+        color: #ccc;
+    }
+</style>
+<body>
+<div style="position: absolute;height: 70px;left: 0;top: 0;width: 100%">
+    <div style="position: absolute;left: 35px;top: 15px;height: 40px;width: 195px">
+        <div style="position: absolute;width: 100%;height:100%;background-image: url(images/126.png);
+        background-repeat: no-repeat;background-size: 75%"></div>
+        <p style="font-size: 16px;height: 30px;line-height: 30px;position: absolute;display: block;
+top: 6px;left: 165px;border-left: 1px solid #ccc;font-family:PingFangSC-Regular,Microsoft YaHei,'\5FAE\8F6F\96C5\9ED1',verdana,sans-serif,Simsun,STXihei
+;padding-left: 13px;margin: 0;text-align: center;color: #888;float: left;white-space: nowrap">你的专业电子邮局</p>
+    </div>
+    <div style="position: absolute;top:34px;right: 40px;color: #666;font-size: 12px;text-align: right;line-height: 14px">
+      <a href="https://qiye.163.com/" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666">企业邮箱</a>
+        <a href="https://vipmail.163.com/?from=fmail" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666">VIP邮箱</a>
+        <a href="https://v.mail.163.com/?utm_source=126loginnav" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666">会员PLUS</a>
+        <a href="https://hw.mail.163.com/#126" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666">海外用户登录</a>
+        <a href="https://mail.163.com/dashi/dlpro.html?from=mail11" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666;border-right: 1px solid #ccc;padding-right: 12px ">邮箱大师</a>
+        <a href="https://help.mail.163.com" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666">帮助</a>
+        <a href="https://help.mail.163.com/newfeedback.do?m=add" style="padding-left: 12px;display: inline-block;vertical-align: center
+      ;text-decoration: none;color: #666">登录反馈</a>
+    </div>
+</div>
+
+    <div style="position: absolute;height: 640px;width: 100%;left: 0;top: 70px;background-color: #fbe4ab">
+         <div style="position: absolute;height:100%;width: 100%;background-image: url(images/promPic.jpg);background-repeat: no-repeat
+         ;left: 0;clear: both">
+
+         </div>
+    </div>
+
+    <div style="position: absolute;height: 74.5%;width:27%;border-radius:4px;background: #fff;
+     top: 17%;left: 56.5%;">
+       <h2 style="position: absolute;text-align: center;padding: 40px 0 0;color: #333;
+       font-size: 20px;line-height: 28px;margin: 0;font-family: PingFangSC-Regular,Microsoft YaHei,'微软雅黑',verdana,sans-serif,Simsun,STXihei
+       ;white-space: nowrap;left: 35%">邮箱账号登录</h2>
+        <div id="AccountBox" style="position: absolute;width: 80%;height: 8%;line-height: 44px;font-size: 12px;
+        border: 1px solid #c5cddb;top: 20%;left: 10%;">
+            <input id="account" placeholder="邮箱账号或手机号码" style="position: absolute;height: 80%;width: 60%;
+            font-size: 16px;border: none;left: 15%;top: 6%;">
+            <span style="position: absolute;height: 80%;width: 20%;font-size: 16px;color: #616161;
+             ;left: 61.5%;top: -3.5%;font-family: 'Microsoft YaHei','微软雅黑'">@126.com</span>
+            <div style="position: absolute;left: 3%;top:22% ;width:10%;height:100%;background: url(images/ico-user.png);
+          background-repeat: no-repeat"></div>
+        </div>
+        <div id="PasswordBox" style="position: absolute;width: 80%;height: 8%;line-height: 44px;font-size: 12px;
+        border: 1px solid #c5cddb;top: 33%;left: 10%">
+            <input id="password" placeholder="输入密码" style="position: absolute;height: 80%;width: 60%;
+            font-size: 16px;border: none;left: 15%;top: 6%;">
+            <div style="position: absolute;left: 3%;top:22% ;width:10%;height:100%;background: url(images/ico-password.png);
+          background-repeat: no-repeat">
+            </div>
+        </div>
+        <span id="checkbox" style="position: absolute;width: 4.4%;height:3%;cursor: pointer;left: 10%;
+         top: 45%;border: 1px solid #ccc;border-radius: 2px">
+               <input style="position: absolute;height: 100%;width: 100%;margin: 0;
+            padding: 0;border: none;opacity: 0;outline: none" type="checkbox">
+            <img id="icon-check" style="position: absolute;visibility: hidden" src="images/ico-checked.png">
+        </span>
+        <span onselectstart="return false" id="SelectLabel" style="position: absolute;font-size: 14px;top: 45%;left: 17%;color: #999;
+        cursor: pointer">十天内免登录</span>
+        <a href="//reg.163.com/resetpwd/index.do" style="position: absolute;right: 10%;top: 45%;
+        color: #1a995c;font-size: 15px;text-decoration: none">忘记密码?</a>
+        <a style="position: absolute;width: 80%;height: 10%;background: #0FAB61;top:55%;left: 10%;
+         text-align: center;border-radius: 4px;color: #fff;font-family: 'Microsoft YaHei','微软雅黑';
+       font-size: 20px;line-height: 50px">登  录</a>
+        <a href="//reg.163.com/resetpwd/index.do" style="position: absolute;left: 40%;top: 70%;
+        color: #1a995c;font-size: 15px;text-decoration: none">注册新账号</a>
+    </div>
+
+<script type="text/javascript">
+    var AccountBox=document.getElementById('AccountBox');
+    var PasswordBox=document.getElementById('PasswordBox');
+    var account=document.getElementById('account');
+    var password=document.getElementById('password');
+    var checkbox=document.getElementById('checkbox');
+    var iconcheck=document.getElementById('icon-check');
+    var SelectLabel=document.getElementById('SelectLabel');
+    window.addEventListener('mousedown',function (e) {
+        if (e.target == account) {
+            AccountBox.style.border = '1px solid #1a995c';
+        }else if (e.target!=account) {
+            AccountBox.style.border = '1px solid #c5cddb';
+        }
+        if (e.target==password){
+            PasswordBox.style.border = '1px solid #1a995c';
+        } else if (e.target!=password){
+            PasswordBox.style.border = '1px solid #c5cddb';
+        }
+    });
+    var showcheck=false;
+    checkbox.onclick=function (ev) {
+        showcheck=!showcheck;
+        if (showcheck){
+            iconcheck.style.visibility='visible';
+        } else {
+            iconcheck.style.visibility='hidden';
+        }
+    }
+    SelectLabel.onclick=function (ev) {
+        showcheck=!showcheck;
+        if (showcheck){
+            iconcheck.style.visibility='visible';
+        } else {
+            iconcheck.style.visibility='hidden';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+.mainContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: mediumaquamarine;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    float: left;
+}
+.h1{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    left: 17%;
+    top: 80%;
+    color: white;
+    font-size: 40px;
+    font-family: 华文行楷;
+    transform: rotate(-10deg);
+}
+.ncepuImg{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    left: 15%;
+    top: 8%;
+    background-image: url(../images/ncepu.png);
+    background-repeat: no-repeat;
+}
+.bookMark{
+    position: absolute;
+    width: 10%;
+    height: 18%;
+    left: 10%;
+    top: 25%;
+    background-image: url(../images/bookmark.png);
+    background-repeat: no-repeat;
+    transform: rotate(-25deg);
+}
+.book1{
+    position: absolute;
+    width: 10%;
+    height: 18%;
+    left: 22%;
+    top: 25%;
+    background-image: url(../images/book1.png);
+    background-repeat: no-repeat;
+    transform: rotate(20deg);
+}
+.loginBox{
+    position: absolute;
+    width: 26%;
+    height: 80%;
+    background-color: white;
+    boder:1px solid #fff;
+    border-radius: 6px;
+    left: 60%;
+    top: 10%;
+}
+.loginH1{
+    position: absolute;
+    left: 38%;
+    top: 3%;
+    letter-spacing: 8px;
+}
+.AccountBox{
+    position: absolute;
+    width: 80%;
+    height: 8%;
+    top: 20%;
+    left: 10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.PasswordBox{
+    position: absolute;
+    width: 80%;
+    height: 8%;
+    top: 35%;
+    left: 10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.icon-Account{
+    position: absolute;
+    background: url(../images/ico-user.png);
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 80%;
+    top: 21%;
+    left: 4%;
+}
+.icon-Cha{
+    position: absolute;
+    background-image: url(../images/cha.png);
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 35%;
+    top: 29.5%;
+    left: 86.5%;
+    background-size: 100%;
+    visibility: hidden;
+}
+.icon-Cha:hover{
+    cursor: pointer;
+}
+.AccountInput{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 10%;
+    left: 15%;
+    border: none;
+    font-size: 16px;
+}
+.icon-Password{
+    position: absolute;
+    background: url(../images/ico-password.png);
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 80%;
+    top: 21%;
+    left: 4%;
+}
+.icon-eye{
+    position: absolute;
+    background-image: url(../images/eye-close.png);
+    background-repeat: no-repeat;
+    width: 8%;
+    height: 50%;
+    top: 21%;
+    left: 85%;
+    background-size: 100%;
+}
+.icon-eye:hover{
+    cursor: pointer;
+}
+.PasswordInput{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 10%;
+    left: 15%;
+    border: none;
+    font-size: 16px;
+}
+#checkbox{
+    position: absolute;height: 3%;width: 1.5%;left: 63%;top: 47.5%;border-radius: 4px;
+    border: 1px solid #ccc
+}
+#checkbox:hover{
+    cursor: pointer;
+}
+#checkinput{
+    position: absolute;height: 100%;width: 100%;margin: 0;
+    padding: 0;border: none;opacity: 0;outline: none
+}
+#icon-check{
+    position: absolute;width: 100%;height: 100%;visibility: hidden;
+}
+.codeBox{
+    position: absolute;
+    width: 30%;
+    height: 8%;
+    top: 55%;
+    left: 10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.codeInput{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    top: 2.8%;
+    left: 0%;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+}
+.createCode{
+    position: absolute;
+    width: 35%;
+    height: 8%;
+    top: 54%;
+    left: 45%;
+    background: #fff;
+}
+.codeLi{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+}
+.vagueCode{
+    position: absolute;
+    left: 76%;
+    top: 57%;
+    font-family: Tahoma;
+    color: mediumaquamarine;
+}
+.vagueCode:hover{
+    cursor: pointer;
+}
+.register{
+    position: absolute;
+    left: 21%;
+    top: 70%;
+    font-family: Tahoma;
+    color: mediumaquamarine;
+}
+.register:hover{
+    cursor: pointer;
+}
+.forgetPassword{
+    position: absolute;
+    left: 60%;
+    top: 70%;
+    font-family: Tahoma;
+    color: mediumaquamarine;
+}
+.forgetPassword:hover{
+    cursor: pointer;
+}
+.loginButton{
+    position: absolute;
+    width: 80%;
+    height: 8%;
+    top: 80%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    line-height: 45px;
+    letter-spacing: 10px;
+    left: 10%;
+    background-color: mediumaquamarine;
+    border-radius: 25px;
+}
+.loginButton:hover{
+    cursor: pointer;
+}
+.normaldialog{
+    position: absolute;
+    background-color: white;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    z-index: 2012;
+    animation: move 0.2s;
+}
+.newBackground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.7;
+}
+.dialog{
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 6px;
+    background-color: deepskyblue;
+    opacity: 0.5;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-family: Cambria;
+    line-height: 65px;
+    z-index: 2012;
+    animation: move 0.2s;
+}
+@keyframes move {
+    0%{
+        transform: scale(0.0);
+    }
+    20%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(0.4);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    80%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+@-webkit-keyframes  move{
+    0%{
+        transform: scale(0.0);
+    }
+    20%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(0.4);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    80%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+@-moz-keyframes move {
+    0%{
+        transform: scale(0.0);
+    }
+    20%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(0.4);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    80%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+@keyframes break {
+    0%{
+        transform: scale(1.0);
+    }
+    20%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(0.6);
+    }
+    60%{
+        transform: scale(0.4);
+    }
+    80%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(0.0);
+    }
+}
+@-webkit-keyframes  break{
+    0%{
+        transform: scale(1.0);
+    }
+    20%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(0.6);
+    }
+    60%{
+        transform: scale(0.4);
+    }
+    80%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(0.0);
+    }
+}
+@-moz-keyframes break {
+    0%{
+        transform: scale(1.0);
+    }
+    20%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(0.6);
+    }
+    60%{
+        transform: scale(0.4);
+    }
+    80%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(0.0);
+    }
+}
+.back{
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    left: 85%;
+    top: 5%;
+    background-image: url(../images/chacha.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.back:hover{
+    cursor: pointer;
+}

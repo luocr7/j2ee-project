@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personal</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+    <link href="css/personal.css" type="text/css" rel="stylesheet">
+    <link href="css/login.css" type="text/css" rel="stylesheet">
+    <style>
+        html,body{
+            -moz-user-select:none;/*火狐*/
+            -webkit-user-select:none;/*webkit浏览器*/
+            -ms-user-select:none;/*IE10*/
+            -khtml-user-select:none;/*早期浏览器*/
+            user-select:none;
+        }
+    </style>
+</head>
+<body>
+<div class="Nav">
+    <H1 class="NavH">图书馆管理系统</H1>
+    <H2 id="indexPage" class="NavH2" style="left: 52%;">首页</H2>
+    <H2 id="borrowPage" class="NavH2" style="left: 60%">借书信息</H2>
+    <H2 id="managePage" class="NavH2" style="left: 70%">书籍管理</H2>
+    <H2 id="personalPage" class="NavH2">个人信息</H2>
+    <form action="/j2ee/Logout" method="post">
+        <input class="NavH2" value="注销" style="left:90%;border:none;background-color: mediumaquamarine;
+        top:29.5%;font-weight: 700;font-size: 24px;" type="submit">
+    </form>
+</div>
+
+
+    <fieldset class="typeLine" style="position: absolute;width: 30%;height: 70%;left: 15%;top: 20%">
+        <legend style="font-size: 25px;font-family: Cambria;color:mediumaquamarine;">个人信息</legend>
+        <table style="line-height: 60px;padding-top: 50px">
+            <tr>
+                <td class="Msgbox">
+                    姓 名:<input class="inputStyle">
+                </td>
+            </tr>
+            <tr>
+                <td class="Msgbox">
+                    学 号:<input class="inputStyle" readonly="true">
+                </td>
+            </tr>
+            <tr>
+                <td class="Msgbox">
+                    专 业:<input class="inputStyle">
+                </td>
+            </tr>
+            <tr>
+                <td class="Msgbox">
+                    班 级:<input class="inputStyle">
+                </td>
+            </tr>
+            <div id="update" class="pageDis" style="left: 180px;top: 380px;position: relative;width: 70px;
+                    height: 40px;background-color: mediumaquamarine">修改</div>
+        </table>
+    </fieldset>
+
+<fieldset class="typeLine" style="position: absolute;width: 30%;height: 70%;left: 55%;top: 20%">
+    <legend style="font-size: 25px;font-family: Cambria;color:mediumaquamarine;">修改密码</legend>
+    <table style="line-height: 60px;padding-top: 50px">
+        <tr>
+            <td  class="Msgbox">
+                原 密 码:<input id="oldPassword" class="inputStyle" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td class="Msgbox">
+                新 密 码:<input id="newPassword" class="inputStyle" type="password">
+            </td>
+        </tr>
+        <div id="change" class="pageDis" style="left: 180px;top: 280px;position: relative;width: 70px;
+                    height: 40px;background-color: mediumaquamarine">修改</div>
+    </table>
+</fieldset>
+
+
+
+
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script>
+    $("#borrowPage").click(function () {
+        window.location.href="borrow.html";
+    });
+    $("#managePage").click(function () {
+        window.location.href="manage.html";
+    });
+    $("#indexPage").click(function () {
+        window.location.href="index.html";
+    });
+
+    $("#update").click(function () {
+        if ($(".inputStyle")[0].value.length==0){
+            createDialog("姓名不能为空!",48,50);
+        } else if($(".inputStyle")[2].value.length==0){
+            createDialog("专业不能为空!",50,50);
+        }else if ($(".inputStyle")[3].value.length==0){
+            createDialog("班级不能为空!",50,50);
+        }
+    });
+
+    $("#change").click(function () {
+        alert(document.getElementById("oldPassword").value)
+        if (document.getElementsByClassName("inputStyle")[4].value.length == 0) {
+            createDialog("请输入原密码!", 48, 50);
+        } else if (document.getElementsByClassName("inputStyle")[5].value.length == 0) {
+            createDialog("请输入新密码!", 48, 50);
+        }else {
+            alert(1)
+        }
+    })
+
+    //创建消息弹框
+    function createDialog(msg,left,top) {
+        var dialog=document.createElement('div');
+        var text=document.createTextNode(msg);
+        dialog.appendChild(text);
+        dialog.style.cssText="left:"+left+"%;top:"+top+"%";
+        dialog.className="dialog";
+        document.body.appendChild(dialog);
+        function animation() {
+            dialog.style.animation="break 0.2s";
+        }
+        function remove(){
+            document.body.removeChild(dialog);
+            clearTimeout(animation);
+        }
+        setTimeout(animation,2000);
+        setTimeout(remove,2100);
+        clearTimeout(remove);
+    }
+</script>
+</body>
+</html>

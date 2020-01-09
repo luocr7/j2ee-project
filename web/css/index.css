@@ -1,0 +1,196 @@
+.Nav{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: mediumaquamarine;
+}
+.NavH{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    color: white;
+    font-family: Cambria;
+}
+.NavH2{
+    position: absolute;
+    left: 80%;
+    font-family: Cambria;
+    color: white;
+    top: 12%;
+}
+.NavH2:hover{
+    cursor: pointer;
+}
+.centerContainer{
+    position: absolute;
+    width: 88%;
+    height: 100%;
+    left: 0%;
+    top: 0;
+}
+.typeLine{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 67%;
+    height: 140%;
+    border: 1px solid #ccc;
+}
+.bookUl{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    width: 30%;
+    height: 100%;
+}
+.bookUl2{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    width: 30%;
+    height: 100%;
+}
+.bookLi{
+    width: 380px;
+    height: 150px;
+    padding: 20px 0px 0px;
+    left: 0;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+.bookImg{
+    position: absolute;
+    left: 10%;
+    height: 130px;
+    width: 110px;
+    padding: 0;
+    margin: 0;
+
+
+}
+.bookName{
+    position: absolute;
+    width:45%;
+    padding: 0;
+    margin: 0;
+    left: 40%;
+    font-family: 华文行楷;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.author{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    left: 40%;
+    font-family: 华文行楷;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.star{
+    position:absolute;
+    padding: 0;
+    margin: 0;
+    left: 40%;
+    font-family: 华文行楷;
+    font-size: 20px;
+}
+.peopleNum{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 40%;
+    font-family: 华文行楷;
+    font-size: 20px;
+}
+.borrowStatus{
+    position: relative;
+    top: -40px;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 40px;
+    left: 80%;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-family: Cambria;
+}
+.borrow{
+    position: relative;
+    top: -50px;
+    border-radius: 4px;
+    background-color: deepskyblue;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 40px;
+    left: 80%;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-family: Cambria;
+}
+.borrow:hover{
+    cursor: pointer;
+}
+.pageDis{
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    top: 157%;
+    left: 25%;
+    color: white;
+    font-family: Cambria;
+    line-height: 37px;
+    background-color: mediumaquamarine;
+    text-align: center;
+    border-radius: 5px;
+}
+.pageDis:hover{
+    cursor: pointer;
+}
+.search{
+    position: absolute;
+    width: 15%;
+    height: 6%;
+    left: 76.5%;
+    top: 40%;
+    box-shadow: 0px 5px 5px #ccc;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.searchInput{
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    top: 5%;
+    border: none;
+}
+.searchIcon{
+    position: absolute;
+    width: 20.5%;
+    height: 101%;
+    background-color: mediumaquamarine;
+    border-radius: 4px;
+    left: 80%;
+    top: 0;
+}
+.searchIcon:hover{
+    cursor: pointer;
+}
+.searchImg{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 15%;
+    left: 15%;
+}
